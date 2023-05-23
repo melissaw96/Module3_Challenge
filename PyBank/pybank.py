@@ -5,7 +5,7 @@ import csv
 count=0
 total_profit_loss=[]
 dates=[]
-csvpath=os.path.join("Resources","budget_data.csv")
+csvpath=os.path.join("Pybank","Resources","budget_data.csv")
 with open(csvpath) as csvfile: 
     csvreader=csv.reader(csvfile,delimiter=',')
     csv_header=next(csvreader)
@@ -51,7 +51,27 @@ print(dates[max_index+1],(max(change_in_profit_loss)))
 print(dates[min_index+1],(min(change_in_profit_loss)))
 
 
-  
+
+
+analysis_path=open("textfile.txt","w")
+analysis_path.write("The total number of months is 86")
+analysis_path.write("The net totala amount of profit/losses over the entire period is 22564198")
+analysis_path.write("The changes in profit/losses is -1443517,631156: the average is -8311.11")
+analysis_path.write("The greatest increase in profits is for August 16 at 1862002")
+analysis_path.write("The greatest decrease in profits is for February 14 at -1825558")
+analysis_path.close()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

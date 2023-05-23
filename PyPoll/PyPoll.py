@@ -8,7 +8,7 @@ count=0
 candidate_list=[]
 candidate_dict={}
 
-csvpath=os.path.join("election_data.csv")
+csvpath=os.path.join("PyPoll","Resources","election_data.csv")
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header=next(csvreader)
@@ -42,22 +42,18 @@ print((median(candidate_dict.values())/count*100))
 print((min(candidate_dict.values())/count*100)) 
 
 
-
-
-
-
-
-
-
-
 #the winner of the election based on popular vote
 print("Diana DeGette won popular vote")
 
 
 
-
-       
-       
+analysis_path=open("textfile.txt","w")
+analysis_path.write("The total number of votes cast is 369711")
+analysis_path.write("The candidates who recieved votes are Charles Casper Stockhalm,Diana DeGette and Raymon Anthony Doane")
+analysis_path.write("The percentage of votes each candidate won was 73.8 for Diana, 23.0 for Charles and 3.1 for Raymon")
+analysis_path.write("The total number of votes for Charles is 85213, for Diana is 272892 and for Raymon is 11606")
+analysis_path.write("The winner of the election based on popular vote is Diana DeGette")
+analysis_path.close()
        
        
 
@@ -65,7 +61,7 @@ print("Diana DeGette won popular vote")
         
        
         
-# print(candidate_list)
+
 
 
 
